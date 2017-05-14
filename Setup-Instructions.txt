@@ -1,0 +1,6 @@
+1. Install Python 3.6.0. You can use teh Anaconda distribution for the installation.
+2. Setup virtual environment for Python version 3.6.0. I have used SAEnv as name for my environment
+3. Activate the environment after navigating to the environment folder by entering "Scripts\activate" command on the command prompt
+4. Instal Django 1.8 by executing PIP install command
+5. After installing and activating the environment create project by name SAProject
+6. Within the project execute create Apps as necessary.
