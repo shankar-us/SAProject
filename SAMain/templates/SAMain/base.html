@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Analysis</title>
+{% block stylesheet %}
+        <link rel="stylesheet" href="{% static 'bootstrap_cyborgtheme\css\bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css\SAMain.css' %}">
+{% endblock stylesheet %}
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Service Manager</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">uploads</a></li>
+        <li><a href="#">Data</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown">Analytical View<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Weekly</a></li>
+            <li><a href="#">Monthly</a></li>
+            <li><a href="#">Yearly</a></li>
+            <li class="divider"></li>
+            <li><a href="#">location One</a></li>
+            <li><a href="#">location Two</a></li>
+          </ul>
+        </li>
+      </ul>
+    <!--  <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Search">
+        </div>
+        <button class="btn btn-default" type="submit">Submit</button>
+      </form>-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Username</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="bs-docs-section">
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="bs-component">
+                <div class="panel panel-default">
+                    <div class="list-group">
+                        <!--<a class="list-group-item active" href="#">Live Wire</a>-->
+                        <a class="list-group-item" href="#">Live Wire</a>
+                        <a class="list-group-item" href="#">Blend Comparison</a>
+                        <a class="list-group-item" href="#">Group Perfromance</a>
+                        <a class="list-group-item" href="#">SLA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-10">
+            <div class="bs-component">
+                {% block content%}
+                    Test
+
+                {% endblock content%}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% block javascript %}
+    <script src="{% static 'jquery-3.2.1.min.js'%}"></script>
+    <script src="{% static 'bootstrap\js\bootstrap.min.js'%}"></script>
+{% endblock javascript %}
+</body>
+</html>

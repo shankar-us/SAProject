@@ -4,3 +4,6 @@
 4. Instal Django 1.8 by executing PIP install command
 5. After installing and activating the environment create project by name SAProject
 6. Within the project execute create Apps as necessary.
+7. Under app folder download and extract bootstrap3 into static folder
+9. After bootstrap downlad and copy the jquery version 3.2.1
+10. Downloaded cyborg theme from https://bootswatch.com/cyborg/
