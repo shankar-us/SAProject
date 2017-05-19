@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Analysis</title>
+    {% block stylesheet %}
+        <link rel="stylesheet" href="{% static 'bootstrap_cyborgtheme\css\bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css\SAMain.css' %}">
+    {% endblock stylesheet %}
+</head>
+<body>
+{% include "SAMain\_navigation_bar.html" %}
+    {% if user.is_authenticated %}
+        <div class="bs-docs-section">
+            <div class="row">
+                <div class="col-lg-2">
+                    {% include "SAMain\_left_side_bar.html" %}
+                </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="bs-component">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% else %}
+       <div class="bs-docs-section">
+           <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-4">
+                    {% include 'SAMain\login.html' %}
+                </div>
+            </div>
+       </div>
+
+    {% endif %}
+
+{% block javascript %}
+    <script src="{% static 'jquery-3.2.1.min.js'%}"></script>
+    <script src="{% static 'bootstrap\js\bootstrap.min.js'%}"></script>
+{% endblock javascript %}
+</body>
+</html>
