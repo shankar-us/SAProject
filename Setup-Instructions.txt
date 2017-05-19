@@ -7,3 +7,7 @@
 7. Under app folder download and extract bootstrap3 into static folder
 9. After bootstrap downlad and copy the jquery version 3.2.1
 10. Downloaded cyborg theme from https://bootswatch.com/cyborg/
+11. Install matplotlib library within the virtual environment
+	command: pip install matplotlib
+12. Install PIL(Python Image Library) inside the virtual environment
+	command: pip install pil

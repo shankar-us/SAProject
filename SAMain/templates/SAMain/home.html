@@ -1,0 +1,29 @@
+{% extends 'SAMain\__base.html' %}
+{% load static %}
+{% block content %}
+<div class="bs-docs-section">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="bs-component">
+                <div class="well">
+                    <img src="{% static {{response}} %}" />
+                </div>
+            </div>
+        </div>
+       <div class="col-lg-4">
+            <div class="bs-component">
+                <div class="well">Test
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="bs-component">
+                <div class="well">Test
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock  %}

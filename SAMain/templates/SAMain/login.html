@@ -1,0 +1,36 @@
+{% block content %}
+
+<div class="panel panel-default">
+    <form class="form-horizontal" action="/admin/login/?next=/admin/" method="post">
+        {% csrf_token %}
+        {{ form }}
+      <fieldset>
+          <div class="panel-heading" ><legend>Login</></legend></div>
+          <div class="panel-body">
+              <div class="form-group">
+
+                <label class="col-lg-2 control-label" for="id_username">Username</label>
+                <div class="col-lg-10">
+                    <input class="form-control" name="username" id="id_username" type="text" placeholder="Username">
+                </div>
+           </div>
+            <div class="form-group">
+              <label class="col-lg-2 control-label" for="id_password">Password</label>
+              <div class="col-lg-10">
+                <input class="form-control" name="password" id="id_password" type="password" placeholder="Password">
+                <input name="next" type="hidden" value="/admin/">
+
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-10 col-lg-offset-4">
+                <button class="btn btn-default" type="reset">Cancel</button>&nbsp;&nbsp;
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+      </fieldset>
+    </form>
+</div>
+
+{% endblock content %}

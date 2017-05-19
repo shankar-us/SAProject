@@ -14,3 +14,23 @@ a.list-group-item:hover, button.list-group-item:hover, a.list-group-item:focus, 
     color: #ffffff;
     background-color: #990000;
 }
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #990000;
+    border-color: #990000;
+}
+
+
+.btn-primary:focus, .focus.btn-primary {
+    color: #ffffff;
+    background-color: #990000;
+    border-color: #990000;
+}
+
+.btn:hover, .btn:focus, .focus.btn {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #D13939;
+    border-color: #D13939;
+}
