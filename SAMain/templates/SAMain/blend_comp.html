@@ -1,0 +1,33 @@
+{% extends 'SAMain\__base.html' %}
+{% load static %}
+{% block content %}
+<div class="bs-docs-section">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="bs-component" align="center">
+                <div class="well" align="center"><b>Total Open Ticket count : <font size="4" color="white">{{open_ticket_count}}</font></b></div>
+                <img style="max-width: 100%;" src="{% static ch_row1_col1 %}">
+            </div>
+        </div>
+       <div class="col-lg-4">
+            <div class="bs-component" align="center">
+                <div class="well" align="center"><b>Total Ticket count (Including closed) : <font size="4" color="white">{{total_ticket_count}}</font></b></div>
+                <img style="max-width: 100%;" src="{% static ch_row1_col2 %}">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="bs-component" align="center">
+                <div class="well" align="center"><b>Total Closed Ticket count : <font size="4" color="white">{{total_closed_count}}</font></b></div>
+                <img style="max-width: 100%;" src="{% static ch_row1_col3 %}">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+
+                    <img src="{% static ch_row2_col1 %}">
+
+        </div>
+    </div>
+</div>
+{% endblock  %}
